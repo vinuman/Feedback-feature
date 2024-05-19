@@ -7,8 +7,8 @@ import Button from "./Button";
 const NavBar = () => {
   const loggedIn = true;
   return (
-    <div className="header">
-      <div className="header-left">
+    <div className="navbar">
+      <div className="navbar-left">
         <h1 className={montserrat.className}>
           The{" "}
           <span style={{ backgroundColor: "#F8F8F8", color: "#0F0F0F" }}>
@@ -17,7 +17,7 @@ const NavBar = () => {
           platform
         </h1>
       </div>
-      <div className="header-right">
+      <div className="navbar-right">
         <NavLink title="Learn" />
         <NavLink title="Practice" />
         {loggedIn && (

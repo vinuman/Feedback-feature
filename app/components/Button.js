@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ text, width, height, bgColor, textColor }) => {
+const Button = ({ text, width, height, bgColor, textColor, className }) => {
   const buttonStyle = {
     width,
     height,
@@ -9,9 +9,11 @@ const Button = ({ text, width, height, bgColor, textColor }) => {
     border: "none",
     borderRadius: "4px",
     fontWeight: "500",
+    outline: "none",
   };
+
   return (
-    <button style={buttonStyle} className="custom-button">
+    <button style={buttonStyle} className={className}>
       {text}
     </button>
   );
