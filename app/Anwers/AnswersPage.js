@@ -3,6 +3,8 @@ import { poppins } from "../layout";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Question from "../components/Question";
 import { tagsArray } from "../utils/utils";
+import Answer from "../components/Answer";
+import { AnswerList } from "../utils/utils";
 
 const AnswersPage = () => {
   return (
@@ -23,6 +25,15 @@ const AnswersPage = () => {
         }
         views={100}
       />
+
+      {AnswerList.map((answer) => (
+        <Answer
+          key={answer.id}
+          name={answer.name}
+          date={answer.date}
+          answer={answer.answer}
+        />
+      ))}
     </>
   );
 };

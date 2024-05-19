@@ -29,18 +29,23 @@ const Question = ({ tagsArray, title, description, views }) => {
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
         <h3 className={poppins.className}>{title}</h3>
-        <p className={poppins.className} style={{ paddingBottom: "20px" }}>
+        <p
+          className={`${poppins.className} text-regular`}
+          style={{ paddingBottom: "20px" }}
+        >
           {description}
         </p>
       </div>
       <div className="question-section">
         <div style={{ display: "flex", gap: "7px", alignItems: "center" }}>
           <Image src={eyeIcon} alt="view icon" />
-          <p>{views} views</p>
+          <p className={`${poppins.className} text-medium`}>{views} views</p>
         </div>
         <div style={{ display: "flex", gap: "7px", alignItems: "center" }}>
           <Image src={infoIcon} alt="info icon" />
-          <p className={poppins.className}>How should you word your answer?</p>
+          <p className={`${poppins.className} text-medium`}>
+            How should you word your answer?
+          </p>
         </div>
       </div>
     </div>

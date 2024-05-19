@@ -1,8 +1,9 @@
 import React from "react";
 import { montserrat } from "../layout";
 import NavLink from "./NavLink";
-import { CgProfile } from "react-icons/cg";
+import profileIcon from "../assets/Profile.svg";
 import Button from "./Button";
+import Image from "next/image";
 
 const NavBar = () => {
   const loggedIn = true;
@@ -21,14 +22,22 @@ const NavBar = () => {
         <NavLink title="Learn" />
         <NavLink title="Practice" />
         {loggedIn && (
-          <div style={{ display: "flex", gap: "10px" }}>
-            <CgProfile className="profileIcon" />
+          <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
+            <div style={{ width: "50x", height: "50px" }}>
+              <Image
+                width={50}
+                height={50}
+                src={profileIcon}
+                alt="profile-pic"
+              />
+            </div>
             <Button
               text={"logout"}
-              width={"100px"}
+              width={"72px"}
               height={"30px"}
               bgColor={"#c7c7c7"}
-              textColor={"#808080"}
+              textColor={"#2a2a2a"}
+              className="nav-btn"
             />
           </div>
         )}

@@ -6,10 +6,10 @@ const Button = ({ text, width, height, bgColor, textColor, className }) => {
     height,
     backgroundColor: bgColor,
     color: textColor,
-    border: "none",
     borderRadius: "4px",
     fontWeight: "500",
     outline: "none",
+    cursor: "pointer",
   };
 
   return (
