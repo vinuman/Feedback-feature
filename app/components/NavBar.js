@@ -4,9 +4,10 @@ import NavLink from "./NavLink";
 import profileIcon from "../assets/Profile.svg";
 import Button from "./Button";
 import Image from "next/image";
+import { useLogout } from "../Contexts/LogoutContext";
 
 const NavBar = () => {
-  const loggedIn = true;
+  const { isLoggedIn, logout } = useLogout();
   return (
     <div className="navbar">
       <div className="navbar-left">
@@ -21,7 +22,7 @@ const NavBar = () => {
       <div className="navbar-right">
         <NavLink title="Learn" />
         <NavLink title="Practice" />
-        {loggedIn && (
+        {isLoggedIn && (
           <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
             <div style={{ width: "50x", height: "50px" }}>
               <Image
@@ -36,18 +37,21 @@ const NavBar = () => {
               width={"72px"}
               height={"30px"}
               bgColor={"#c7c7c7"}
-              textColor={"#2a2a2a"}
+              textColor={"#808080"}
               className="nav-btn"
+              onClick={logout}
             />
           </div>
         )}
-        {!loggedIn && (
+        {!isLoggedIn && (
           <Button
             text={"login"}
             width={"100px"}
             height={"30px"}
             bgColor={"#c7c7c7"}
             textColor={"#808080"}
+            className="nav-btn"
+            onClick={logout}
           />
         )}
       </div>

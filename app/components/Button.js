@@ -1,6 +1,15 @@
 import React from "react";
 
-const Button = ({ text, width, height, bgColor, textColor, className }) => {
+const Button = ({
+  text,
+  width,
+  height,
+  bgColor,
+  textColor,
+  className,
+  disabled,
+  onClick,
+}) => {
   const buttonStyle = {
     width,
     height,
@@ -13,7 +22,13 @@ const Button = ({ text, width, height, bgColor, textColor, className }) => {
   };
 
   return (
-    <button style={buttonStyle} className={className}>
+    // Use the disabled prop directly to conditionally apply the disabled attribute
+    <button
+      onClick={onClick}
+      style={buttonStyle}
+      className={className}
+      disabled={disabled}
+    >
       {text}
     </button>
   );
