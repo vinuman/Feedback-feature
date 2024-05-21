@@ -19,6 +19,7 @@ const initialState = {
   contactUs: {
     text: "",
     email: "",
+    name: "",
   },
 };
 

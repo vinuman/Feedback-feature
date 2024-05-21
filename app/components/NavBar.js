@@ -20,8 +20,10 @@ const NavBar = () => {
         </h1>
       </div>
       <div className="navbar-right">
-        <NavLink title="Learn" />
-        <NavLink title="Practice" />
+        <div className="nav-links">
+          <NavLink title="Learn" />
+          <NavLink title="Practice" />
+        </div>
         {isLoggedIn && (
           <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
             <div style={{ width: "50x", height: "50px" }}>

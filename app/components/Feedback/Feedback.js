@@ -12,15 +12,22 @@ import ReportIssue from "./ReportIssue";
 import ShareFeedback from "./ShareFeedback";
 import Suggestions from "./Suggestions";
 import Contact from "./Contact";
+import FabButtonM from "../../assets/Fab-M.svg";
+import FabButtonMW from "../../assets/fab-w-m.svg";
 import DialogBox from "./DialogueBox";
 import { useFeedback } from "@/app/Contexts/FeedBackContext";
 
 const Feedback = () => {
   const { state, dispatch } = useFeedback();
   const [isOpen, setIsOpen] = useState(false);
+  const [mob, setMob] = useState(false);
   const [isOptionSelected, setOptionSelected] = useState(false);
   const [isSubmissionSuccess, setIsSubmissionSucces] = useState(false);
   const [submitFeedback, setSubmitSuccess] = useState("");
+
+  const handleMobileFabBtn = () => {
+    setMob(true);
+  };
 
   const handleFeedbackOpen = () => {
     setIsOpen(true);
@@ -47,6 +54,7 @@ const Feedback = () => {
       setIsSubmissionSucces(false);
       setSubmitSuccess("");
     }, 5000);
+    handleMobileFabBtn();
   };
 
   const onReportSubmit = () => {
@@ -118,7 +126,7 @@ const Feedback = () => {
           <div className="feedback-icon-container">
             <div className=""></div>
             <Image
-              className="fab-button"
+              className="fab-button-close"
               onClick={handleFeedbackClose}
               src={closeIcon}
               alt="close Icon"
@@ -127,7 +135,7 @@ const Feedback = () => {
         </div>
       )}
       {isOptionSelected && (
-        <div>
+        <div className="option-selected">
           {state.activeTab === "reportIssue" && (
             <ReportIssue onReportSubmit={onReportSubmit} />
           )}
@@ -157,7 +165,10 @@ const Feedback = () => {
             </div>
             <div
               onClick={() =>
-                dispatch({ type: "SET_ACTIVE_TAB", payload: "giveSuggestion" })
+                dispatch({
+                  type: "SET_ACTIVE_TAB",
+                  payload: "giveSuggestion",
+                })
               }
               className={` ${
                 state.activeTab === "giveSuggestion" && "horizontal-icon"
@@ -205,7 +216,7 @@ const Feedback = () => {
               className="feedback-icon-container"
             >
               <Image
-                className="fab-button"
+                className="fab-button-close"
                 src={closeIcon}
                 alt="contact icon"
               />
@@ -214,12 +225,34 @@ const Feedback = () => {
         </div>
       )}
       {!isOpen && !isOptionSelected && (
-        <Image
-          className="fab-button"
-          onClick={handleFeedbackOpen}
-          src={FeedbackIcon}
-          alt="Feedback Icon"
-        />
+        <>
+          <Image
+            className="fab-button"
+            onClick={handleFeedbackOpen}
+            src={FeedbackIcon}
+            alt="Feedback Icon"
+          />
+          {!mob && (
+            <Image
+              className="fab-button-mob"
+              onClick={() => {
+                handleFeedbackOpen();
+              }}
+              src={FabButtonM}
+              alt="Feedback Icon"
+            />
+          )}
+          {mob && (
+            <Image
+              className="fab-button-mob"
+              onClick={() => {
+                handleFeedbackOpen();
+              }}
+              src={FabButtonMW}
+              alt="Feedback Icon"
+            />
+          )}
+        </>
       )}
       {isSubmissionSuccess && <DialogBox message={submitFeedback} />}
     </div>

@@ -23,3 +23,42 @@ export const AnswerList = [
       "The collaboration with Amazon signifies a pivotal moment for the travel startup, enabling seamless integration of their personalized travel agent bots into households worldwide. By harnessing the power of voice technology, the startup can redefine travel assistance, offering users unparalleled convenience and accessibility. This strategic alignment fortifies the startup's position in the market and paves the way for future advancements in the travel industry.",
   },
 ];
+
+export const categories = [
+  "popular",
+  "complexity",
+  "Industry type",
+  "Industry",
+  "Company type",
+];
+
+export const questions = [
+  {
+    id: 1,
+
+    date: "Jun 27, 2023",
+    question:
+      "A travel startup wants Amazon to pre-install their personal travel agent bot on existing Amazon Echos. What is the value of the partnership to the travel startup?",
+  },
+  {
+    id: 2,
+
+    date: "Jul 15, 2023",
+    question:
+      "A fitness app wants Apple to feature their new workout tracking feature in the App Store. How would this collaboration benefit the fitness app?",
+  },
+  {
+    id: 3,
+
+    date: "Aug 5, 2023",
+    question:
+      "An e-learning platform wants Google to integrate their courses into Google Classroom. What potential advantages could this bring to the e-learning platform?",
+  },
+  {
+    id: 4,
+
+    date: "Aug 1, 2023",
+    question:
+      "A food delivery service wants Samsung to promote their new subscription service on Samsung Smart TVs. What impact could this partnership have on the food delivery service?",
+  },
+];
