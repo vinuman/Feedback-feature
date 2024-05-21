@@ -3,7 +3,7 @@ import Button from "./Button";
 import rocketIcon from "../assets/Frame2211.svg";
 import Image from "next/image";
 import eyeIcon from "../assets/Vector.svg";
-import infoIcon from "../assets/info.png";
+/* import infoIcon from "../assets/info.png"; */
 import { poppins } from "../layout";
 
 const Question = ({ tagsArray, title, description, views }) => {
@@ -42,7 +42,7 @@ const Question = ({ tagsArray, title, description, views }) => {
           <p className={`${poppins.className} text-medium`}>{views} views</p>
         </div>
         <div style={{ display: "flex", gap: "7px", alignItems: "center" }}>
-          <Image src={infoIcon} alt="info icon" />
+          {/*  <Image src={infoIcon} alt="info icon" /> */}
           <p className={`${poppins.className} text-medium`}>
             How should you word your answer?
           </p>
