@@ -608,4 +608,11 @@ input[type="file"] {
   .horizontal-icon::after {
     border: 2px solid var(--main-black);
   }
+
+  .feedback-label {
+    padding: 8px 16px;
+    background-color: var(--main-white);
+    color: var(--main-black);
+    border-radius: 4px;
+  }
 }
