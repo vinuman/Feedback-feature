@@ -10,10 +10,13 @@ import FilterList from "../components/FilterList";
 import { categories } from "../utils/utils";
 import { questions } from "../utils/utils";
 import QuestionMob from "../components/QuestionMob";
+import { useLogout } from "../Contexts/LogoutContext";
+import { dimmedStyle } from "../utils/utils";
 
 const AnswersPage = () => {
+  const { isBgDimmed } = useLogout();
   return (
-    <>
+    <main style={isBgDimmed ? dimmedStyle : {}}>
       <div className="answers-desktop">
         <div style={{ display: "flex", gap: "10px" }}>
           <FaArrowLeftLong
@@ -63,7 +66,7 @@ const AnswersPage = () => {
           />
         ))}
       </div>
-    </>
+    </main>
   );
 };
 

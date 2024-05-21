@@ -16,6 +16,8 @@ import FabButtonM from "../../assets/Fab-M.svg";
 import FabButtonMW from "../../assets/fab-w-m.svg";
 import DialogBox from "./DialogueBox";
 import { useFeedback } from "@/app/Contexts/FeedBackContext";
+import { useLogout } from "@/app/Contexts/LogoutContext";
+import { dimmedStyle } from "@/app/utils/utils";
 
 const Feedback = () => {
   const { state, dispatch } = useFeedback();
@@ -24,6 +26,7 @@ const Feedback = () => {
   const [isOptionSelected, setOptionSelected] = useState(false);
   const [isSubmissionSuccess, setIsSubmissionSucces] = useState(false);
   const [submitFeedback, setSubmitSuccess] = useState("");
+  const { setIsBgDimmed, isBgDimmed } = useLogout();
 
   const handleMobileFabBtn = () => {
     setMob(true);
@@ -38,6 +41,7 @@ const Feedback = () => {
     setOptionSelected(false);
     setIsSubmissionSucces(false);
     dispatch({ type: "RESET_STATE" });
+    setIsBgDimmed(false);
   };
 
   const handleOptionSelected = () => {
@@ -55,6 +59,7 @@ const Feedback = () => {
       setSubmitSuccess("");
     }, 5000);
     handleMobileFabBtn();
+    setIsBgDimmed(false);
   };
 
   const onReportSubmit = () => {
@@ -254,6 +259,7 @@ const Feedback = () => {
               className="fab-button-mob"
               onClick={() => {
                 handleFeedbackOpen();
+                setIsBgDimmed(true);
               }}
               src={FabButtonM}
               alt="Feedback Icon"
@@ -264,6 +270,7 @@ const Feedback = () => {
               className="fab-button-mob"
               onClick={() => {
                 handleFeedbackOpen();
+                setIsBgDimmed(true);
               }}
               src={FabButtonMW}
               alt="Feedback Icon"

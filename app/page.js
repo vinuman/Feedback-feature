@@ -11,9 +11,9 @@ export default function Home() {
       <FeedbackProvider>
         <LogoutProvider>
           <NavBar />
-          <main>
-            <AnswersPage />
-          </main>
+
+          <AnswersPage />
+
           <Feedback />
         </LogoutProvider>
       </FeedbackProvider>

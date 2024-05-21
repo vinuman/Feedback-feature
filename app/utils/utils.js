@@ -62,3 +62,8 @@ export const questions = [
       "A food delivery service wants Samsung to promote their new subscription service on Samsung Smart TVs. What impact could this partnership have on the food delivery service?",
   },
 ];
+
+export const dimmedStyle = {
+  backgroundColor: "rgba(0, 0, 0, 0.6)",
+  transition: "background-color 0.3s ease",
+};

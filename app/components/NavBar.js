@@ -5,11 +5,12 @@ import profileIcon from "../assets/Profile.svg";
 import Button from "./Button";
 import Image from "next/image";
 import { useLogout } from "../Contexts/LogoutContext";
+import { dimmedStyle } from "../utils/utils";
 
 const NavBar = () => {
-  const { isLoggedIn, logout } = useLogout();
+  const { isLoggedIn, logout, isBgDimmed } = useLogout();
   return (
-    <div className="navbar">
+    <div style={isBgDimmed ? dimmedStyle : {}} className="navbar">
       <div className="navbar-left">
         <h1 className={montserrat.className}>
           The{" "}

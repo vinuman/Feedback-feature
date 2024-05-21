@@ -212,8 +212,8 @@ h3 {
 
 .feedback-label {
   padding: 8px 16px;
-  background-color: var(--grey);
-  color: var(--main-black);
+  background-color: var(--main-black);
+  color: var(--main-white);
   border-radius: 4px;
 }
 
@@ -228,6 +228,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding-top: 10px;
 }
 
 .feedback-form-container {
@@ -532,7 +533,6 @@ input[type="file"] {
     width: 100%;
     margin: -20px auto;
     max-height: 100vh;
-    background-color: var(--main-black);
   }
 
   .feedback-icon-container {
@@ -545,7 +545,6 @@ input[type="file"] {
   }
 
   .feedback-vertical-open {
-    background-color: var(--main-black);
     padding: 10px;
     border-radius: 12px;
   }
@@ -554,7 +553,6 @@ input[type="file"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--main-black);
     width: 100%;
   }
 
@@ -605,5 +603,9 @@ input[type="file"] {
 
   .dialog-box-pointer {
     right: 10px;
+  }
+
+  .horizontal-icon::after {
+    border: 2px solid var(--main-black);
   }
 }
