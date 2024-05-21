@@ -91,7 +91,11 @@ const Feedback = () => {
             className="feedback-icon-container"
           >
             <div className="feedback-label">Report an Issue</div>
-            <Image src={issueIcon} alt="issue icon" />
+            <Image
+              className="feedback-vertical-icon"
+              src={issueIcon}
+              alt="issue icon"
+            />
           </div>
           <div
             onClick={() => {
@@ -101,7 +105,11 @@ const Feedback = () => {
             className="feedback-icon-container"
           >
             <div className="feedback-label">Share Feedback</div>
-            <Image src={feedback} alt="feedback icon" />
+            <Image
+              className="feedback-vertical-icon"
+              src={feedback}
+              alt="feedback icon"
+            />
           </div>
           <div
             onClick={() => {
@@ -111,7 +119,11 @@ const Feedback = () => {
             className="feedback-icon-container"
           >
             <div className="feedback-label">Give Suggestion</div>
-            <Image src={suggestionIcon} alt="suggestion icon" />
+            <Image
+              className="feedback-vertical-icon"
+              src={suggestionIcon}
+              alt="suggestion icon"
+            />
           </div>
           <div
             onClick={() => {
@@ -121,12 +133,16 @@ const Feedback = () => {
             className="feedback-icon-container"
           >
             <div className="feedback-label">Contact Us</div>
-            <Image src={contactIcon} alt="contact icon" />
+            <Image
+              className="feedback-vertical-icon"
+              src={contactIcon}
+              alt="contact icon"
+            />
           </div>
           <div className="feedback-icon-container">
             <div className=""></div>
             <Image
-              className="fab-button-close"
+              className="fab-button-close feedback-vertical-icon"
               onClick={handleFeedbackClose}
               src={closeIcon}
               alt="close Icon"
@@ -216,9 +232,10 @@ const Feedback = () => {
               className="feedback-icon-container"
             >
               <Image
+                style={{ width: "52px", height: "52px", marginBottom: "5px" }}
                 className="fab-button-close"
                 src={closeIcon}
-                alt="contact icon"
+                alt="close icon"
               />
             </div>
           </div>

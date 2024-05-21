@@ -384,6 +384,14 @@ input[type="file"] {
   pointer-events: none;
 }
 
+.question-mob {
+  display: none;
+}
+
+.answers-mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .navbar {
     align-items: center;
@@ -448,6 +456,7 @@ input[type="file"] {
   .mob-desc {
     color: var(--main-white);
     display: flex;
+    margin-bottom: 10px;
   }
 
   .filter-btn {
@@ -522,9 +531,17 @@ input[type="file"] {
     justify-content: center;
     width: 100%;
     margin: -20px auto;
-
     max-height: 100vh;
     background-color: var(--main-black);
+  }
+
+  .feedback-icon-container {
+    margin: 10px 0;
+  }
+
+  .feedback-vertical-icon {
+    width: 48px;
+    height: 48px;
   }
 
   .feedback-vertical-open {
@@ -541,6 +558,10 @@ input[type="file"] {
     width: 100%;
   }
 
+  .feedback-label {
+    padding: 4px 12px;
+  }
+
   .feedback-form-container {
     padding-bottom: 32px;
     padding-top: 10px;
@@ -551,7 +572,6 @@ input[type="file"] {
   .feedback-form-header {
     padding: 0px;
     font-size: 18px;
-
     margin-bottom: 0;
   }
 
@@ -564,8 +584,6 @@ input[type="file"] {
   .feedback-form-fields textarea::placeholder {
     font-size: 16px;
   }
-
-  /* Work starts */
 
   .form-button {
     font-size: 18px;
