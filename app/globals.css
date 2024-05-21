@@ -212,8 +212,8 @@ h3 {
 
 .feedback-label {
   padding: 8px 16px;
-  background-color: var(--main-black);
-  color: var(--main-white);
+  background-color: var(--main-white);
+  color: var(--main-black);
   border-radius: 4px;
 }
 
@@ -558,6 +558,8 @@ input[type="file"] {
 
   .feedback-label {
     padding: 4px 12px;
+    background-color: var(--main-black);
+    color: var(--main-white);
   }
 
   .feedback-form-container {
@@ -607,12 +609,5 @@ input[type="file"] {
 
   .horizontal-icon::after {
     border: 2px solid var(--main-black);
-  }
-
-  .feedback-label {
-    padding: 8px 16px;
-    background-color: var(--main-white);
-    color: var(--main-black);
-    border-radius: 4px;
   }
 }
